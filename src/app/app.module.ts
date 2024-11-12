@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { LastPostComponent } from './last-post/last-post.component';
+import { HttpClientModule } from '@angular/common/http'; // Importar o módulo HTTP
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LastPostComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
   ],
-  providers: [
-    provideClientHydration()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
